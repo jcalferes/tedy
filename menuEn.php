@@ -255,11 +255,11 @@
                                 </li>
                             </ul>
                         </li>
-                        <!--                        <li class="hidden-xs">
-                                                    <a href="#" id="cmdAsideMenu" class="dropdown-toggle dropdown-form-toggle" title="Open sidebar">
-                                                        <i class="fa fa-outdent"></i>
-                                                    </a>
-                                                </li>-->
+<!--                        <li class="hidden-xs">
+                            <a href="#" id="cmdAsideMenu" class="dropdown-toggle dropdown-form-toggle" title="Open sidebar">
+                                <i class="fa fa-outdent"></i>
+                            </a>
+                        </li>-->
                     </ul>
                 </div><!--/.nav-collapse -->
             </div>
