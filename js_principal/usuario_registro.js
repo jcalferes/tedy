@@ -75,7 +75,7 @@ $("#btnregistro").click(function () {
     var pass2 = $.trim($("#txtPass2").val());
     if (pass != pass2) {
         if (lang == "en") {
-            alertify.error("Passwords dont match");
+            alertify.error("The passwords dont match");
             return false;
         } else {
             alertify.error("Las contraseñas no coinciden");
