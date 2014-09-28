@@ -8,8 +8,13 @@
         <!-- Required -->
         <link href="css/global-style.css" rel="stylesheet" type="text/css" media="screen">
         <link rel="icon" href="images/favicon.png" type="image/png">
+
+        <!-- Alertify -->
+        <link href="alertify/themes/alertify.core.css" rel="stylesheet">
+        <link href="alertify/themes/alertify.default.css" rel="stylesheet">
     </head>
     <body>
+        <span id="lang" hidden="true">en</span>
         <?php include './menuEn.php'; ?>
         <div class="pg-opt pin">
             <div class="container">
@@ -57,60 +62,50 @@
                                             Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
                                         </p>
                                         <form class="form-light padding-15">
+                                            <div class="form-group">
+                                                <label for="email">Name</label>
+                                                <input type="text" class="form-control nonull sololetras" id="txtNombre" placeholder="">
+                                            </div>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="firstName">First name</label>
-                                                        <input type="text" class="form-control" id="firstName" placeholder="">
+                                                        <input type="text" class="form-control nonull sololetras" id="txtApellidoPaterno" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="lastName">Last name</label>
-                                                        <input type="text" class="form-control" id="lastName" placeholder="">
+                                                        <input type="text" class="form-control nonull sololetras" id="txtApellidoMaterno" placeholder="">
                                                     </div>
                                                 </div>
                                             </div>  
 
                                             <div class="form-group">
                                                 <label for="email">Email</label>
-                                                <input type="email" class="form-control" id="txtEmail" placeholder="">
+                                                <input type="email" class="form-control nonull" id="txtEmail" placeholder="">
                                             </div>
 
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="pass">Password</label>
-                                                        <input type="password" class="form-control" id="pass" placeholder="">
+                                                        <input type="password" class="form-control nonull" id="txtPass" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
                                                         <label for="pass2">Confirm password</label>
-                                                        <input type="password" class="form-control" id="pass2" placeholder="">
+                                                        <input type="password" class="form-control nonull" id="txtPass2" placeholder="">
                                                     </div>
                                                 </div>
                                             </div>      
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="country">Country</label>
-                                                        <input type="text" class="form-control" id="country" placeholder="">
-                                                    </div>
+                                                    <label class="checkbox persistent"><input type="checkbox" id="chkterminos"> I accept the <a href="terms.html">terms and conditions of this website.</a></label>                        
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="city">City</label>
-                                                        <input type="text" class="form-control" id="city" placeholder="">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label class="checkbox persistent"><input type="checkbox"> I accept the <a href="terms.html">terms and conditions of this website.</a></label>                        
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <button class="btn btn-two pull-right" type="submit">Sign Up</button>                        
+                                                    <button class="btn btn-two pull-right" type="button" id="btnregistro">Sign Up</button>                        
                                                 </div>
                                             </div>
                                         </form>
@@ -225,5 +220,17 @@
     <script type="text/javascript" src="assets/sticky/jquery.sticky.js"></script>
     <script type="text/javascript" src="js/jquery.wp.custom.js"></script>
     <script type="text/javascript" src="js/jquery.wp.switcher.js"></script>
+
+    <!-- Alertify JS -->
+    <script src="alertify/lib/alertify.js"></script>
+
+    <!-- Validad Campos Franz -->
+    <script src="utilerias/validCampoFranz.js"></script>
+
+    <!-- Numeric -->
+    <script src="utilerias/jquery.numeric.js"></script>
+
+    <!-- Principal -->
+    <script type="text/javascript" src="js_principal/usuario_registro.js"></script>
 </body>
 </html>
