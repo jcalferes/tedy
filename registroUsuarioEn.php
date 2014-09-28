@@ -163,38 +163,38 @@
                                             <p>
                                                 Todos los campos con * son requeridos.
                                             </p>
-                                            <form class="form-light padding-15">
+                                            <!--<form>-->
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="firstName">Nombre*</label>
-                                                            <input type="text" class="form-control" id="firstName" placeholder="" required="true">
+                                                            <input type="text" class="form-control" id="firstName" placeholder="" >
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="lastName">Apellidos*</label>
-                                                            <input type="text" class="form-control" id="lastName" placeholder="" required="true">
+                                                            <input type="text" class="form-control" id="lastName" placeholder="" >
                                                         </div>
                                                     </div>
                                                 </div>  
 
                                                 <div class="form-group">
                                                     <label for="email">Correo*</label>
-                                                    <input type="email" class="form-control" id="txtEmail" placeholder="" required="true">
+                                                    <input type="email" class="form-control" id="txtEmail" placeholder="">
                                                 </div>
 
                                                 <div class="row">
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="pass">Contraseña*</label>
-                                                            <input type="password" class="form-control" id="pass" placeholder="" required="true">
+                                                            <input type="password" class="form-control" id="pass" placeholder="" >
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="pass2">Confirmar Contraseña*</label>
-                                                            <input type="password" class="form-control" id="pass2" placeholder="" required="true">
+                                                            <input type="password" class="form-control" id="pass2" placeholder="">
                                                         </div>
                                                     </div>
                                                 </div>      
@@ -202,13 +202,13 @@
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="country">Pais*</label>
-                                                            <input type="text" class="form-control" id="country" placeholder="" required="true">
+                                                            <input type="text" class="form-control" id="country" placeholder="">
                                                         </div>
                                                     </div>
                                                     <div class="col-md-6">
                                                         <div class="form-group">
                                                             <label for="city">Ciudad*</label>
-                                                            <input type="text" class="form-control" id="city" placeholder="" required="true">
+                                                            <input type="text" class="form-control" id="city" placeholder="" >
                                                         </div>
                                                     </div>
                                                 </div>
@@ -217,10 +217,11 @@
                                                         <label class="checkbox persistent"><input type="checkbox"> Acepto  <a href="terms.html">Los terminos y condiciones de la pagina.</a></label>                        
                                                     </div>
                                                     <div class="col-md-6">
-                                                        <button class="btn btn-two pull-right" type="submit">Iniciar session</button>                        
+                                                        <!--<button class="btn btn-two pull-right" type="submit">Iniciar session</button>--> 
+                                                        <input type="submit" class="btn btn-two pull-right" value="Iniciar session"/>
                                                     </div>
                                                 </div>
-                                            </form>
+                                            <!--</form>-->
 
                                         </div>
                                         <div class="form-footer">
