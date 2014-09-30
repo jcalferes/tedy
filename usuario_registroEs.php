@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
     <head>
         <meta charset="utf-8">
-        <title>Boomerang - Multipurpose Template: Welcome</title>
+        <title>Bienvenido a Mercatodo.com</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Required -->
         <link href="css/global-style.css" rel="stylesheet" type="text/css" media="screen">
         <link rel="icon" href="images/favicon.png" type="image/png">
+
+        <!-- Alertify -->
+        <link href="alertify/themes/alertify.core.css" rel="stylesheet">
+        <link href="alertify/themes/alertify.default.css" rel="stylesheet">
     </head>
-    <body>  
-        <?php include './menuEs.php'; ?>
+    <body>
+        <span id="lang" hidden="true">en</span>
+        <?php include './menuEn.php'; ?>
         <div class="pg-opt pin">
             <div class="container">
                 <div class="row">
                     <div class="col-md-6">
-                        <h2>Registro</h2>
+                        <h2>Sign up</h2>
                     </div>
                     <!--                    <div class="col-md-6">
                                             <ol class="breadcrumb">
@@ -35,9 +40,9 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="text-center">
-                                <h2>Bienvenido a Mercatodo</h2>
+                                <h2>Welcome to Boomerang Bootstrap Template</h2>
                                 <p style="font-size:16px;">
-                                    Crea una cuenta para ser parte de nuestro equipo
+                                    Create your own account and explore more.
                                 </p>
 
                             </div>
@@ -50,74 +55,64 @@
                                 <div class="w-box sign-in-wr bg-5">
 
                                     <div class="form-header">
-                                        <h2>Crea tu cuenta</h2>
+                                        <h2>Create your own account</h2>
                                     </div>
                                     <div class="form-body">
                                         <p>
-                                            Todos los campos con * son requeridos.
+                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
                                         </p>
                                         <form class="form-light padding-15">
+                                            <div class="form-group">
+                                                <label for="email">Name</label>
+                                                <input type="text" class="form-control nonull sololetras" id="txtNombre" placeholder="">
+                                            </div>
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="firstName">Nombre*</label>
-                                                        <input type="text" class="form-control" id="firstName" placeholder="" required="true">
+                                                        <label for="firstName">First name</label>
+                                                        <input type="text" class="form-control nonull sololetras" id="txtApellidoPaterno" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="lastName">Apellidos*</label>
-                                                        <input type="text" class="form-control" id="lastName" placeholder="" required="true">
+                                                        <label for="lastName">Last name</label>
+                                                        <input type="text" class="form-control nonull sololetras" id="txtApellidoMaterno" placeholder="">
                                                     </div>
                                                 </div>
                                             </div>  
 
                                             <div class="form-group">
-                                                <label for="email">Correo*</label>
-                                                <input type="email" class="form-control" id="txtEmail" placeholder="" required="true">
+                                                <label for="email">Email</label>
+                                                <input type="email" class="form-control nonull" id="txtEmail" placeholder="">
                                             </div>
 
                                             <div class="row">
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="pass">Contraseña*</label>
-                                                        <input type="password" class="form-control" id="pass" placeholder="" required="true">
+                                                        <label for="pass">Password</label>
+                                                        <input type="password" class="form-control nonull" id="txtPass" placeholder="">
                                                     </div>
                                                 </div>
                                                 <div class="col-md-6">
                                                     <div class="form-group">
-                                                        <label for="pass2">Confirmar Contraseña*</label>
-                                                        <input type="password" class="form-control" id="pass2" placeholder="" required="true">
+                                                        <label for="pass2">Confirm password</label>
+                                                        <input type="password" class="form-control nonull" id="txtPass2" placeholder="">
                                                     </div>
                                                 </div>
                                             </div>      
                                             <div class="row">
                                                 <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="country">Pais*</label>
-                                                        <input type="text" class="form-control" id="country" placeholder="" required="true">
-                                                    </div>
+                                                    <label class="checkbox persistent"><input type="checkbox" id="chkterminos"> I accept the <a href="terms.html">terms and conditions of this website.</a></label>                        
                                                 </div>
                                                 <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="city">Ciudad*</label>
-                                                        <input type="text" class="form-control" id="city" placeholder="" required="true">
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label class="checkbox persistent"><input type="checkbox"> Acepto  <a href="terms.html">Los terminos y condiciones de la pagina.</a></label>                        
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <button class="btn btn-two pull-right" type="submit">Iniciar session</button>                        
+                                                    <button class="btn btn-two pull-right" type="button" id="btnregistro">Sign Up</button>                        
                                                 </div>
                                             </div>
                                         </form>
 
                                     </div>
                                     <div class="form-footer">
-                                        <p>¿Ya tienes cuenta? <a href="sign-in.html">Click aqui para iniciar session.</a></p>
+                                        <p>Already have an account? <a href="sign-in.html">Click here to sign in.</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -128,7 +123,77 @@
 
         </section>
 
-    </div>
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="col">
+                            <h4>Contact us</h4>
+                            <ul>
+                                <li>5th Avenue, New York - United States</li>
+                                <li>Phone: +10 724 1234 567 | Fax: +10 724 1234 567 </li>
+                                <li>Email: <a href="mailto:hello@example.com" title="Email Us">hello@example.com</a></li>
+                                <li>Skype: <a href="skype:my.business?call" title="Skype us">my-business</a></li>
+                                <li>Creating great templates is our passion</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="col">
+                            <h4>Mailing list</h4>
+                            <p>Sign up if you would like to receive occasional treats from us.</p>
+                            <form class="form-inline">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Your email address...">
+                                    <span class="input-group-btn">
+                                        <button class="btn btn-two" type="button">Go!</button>
+                                    </span>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="col col-social-icons">
+                            <h4>Follow us</h4>
+                            <a href="#"><i class="fa fa-facebook"></i></a>
+                            <a href="#"><i class="fa fa-google-plus"></i></a>
+                            <a href="#"><i class="fa fa-linkedin"></i></a>
+                            <a href="#"><i class="fa fa-twitter"></i></a>
+                            <a href="#"><i class="fa fa-skype"></i></a>
+                            <a href="#"><i class="fa fa-pinterest"></i></a>
+                            <a href="#"><i class="fa fa-youtube-play"></i></a>
+                            <a href="#"><i class="fa fa-flickr"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <div class="col">
+                            <h4>About us</h4>
+                            <p>
+                                Boomerang Bootstrap Template is made with love and passion for your own business.
+                                <br><br>
+                                <a href="#" class="btn btn-two">Try it now!</a>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <div class="row">
+                    <div class="col-lg-9 copyright">
+                        2013 © Web Pixels. All rights reserverd. 
+                        <a href="#">Terms of use</a> | 
+                        <a href="#">Privacy policy</a>
+                    </div>
+                    <div class="col-lg-3 footer-logo">
+
+                    </div>
+                </div>
+            </div>
+        </footer></div>
 
     <!-- JavaScript -->
     <script type="text/javascript" src="js/jquery.js"></script>
@@ -155,5 +220,17 @@
     <script type="text/javascript" src="assets/sticky/jquery.sticky.js"></script>
     <script type="text/javascript" src="js/jquery.wp.custom.js"></script>
     <script type="text/javascript" src="js/jquery.wp.switcher.js"></script>
+
+    <!-- Alertify JS -->
+    <script src="alertify/lib/alertify.js"></script>
+
+    <!-- Validad Campos Franz -->
+    <script src="utilerias/validCampoFranz.js"></script>
+
+    <!-- Numeric -->
+    <script src="utilerias/jquery.numeric.js"></script>
+
+    <!-- Principal -->
+    <script type="text/javascript" src="js_principal/usuario_registro.js"></script>
 </body>
 </html>
