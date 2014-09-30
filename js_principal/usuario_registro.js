@@ -8,10 +8,6 @@ $(document).ready(function () {
 });
 
 $("#btnregistro").click(function () {
-    
-    var nose = 
-    alert(nose);
-    return false;
     var ctrlnonull;
     $(".nonull").each(function () {
         var valor = $.trim($(this).val());
