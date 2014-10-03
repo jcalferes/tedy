@@ -1,13 +1,13 @@
 <?php
 
-
 class usuario {
+
     private $nombre;
     private $apterno;
     private $amaterno;
     private $email;
     private $pass;
-    
+
     function getNombre() {
         return $this->nombre;
     }
@@ -47,6 +47,5 @@ class usuario {
     function setPass($pass) {
         $this->pass = $pass;
     }
-
 
 }
