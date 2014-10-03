@@ -2,13 +2,12 @@
 var lang;
 //==============================================================================
 $(document).ready(function () {
-    lang = $("#lang").text();
+    lang = $("html").attr('lang');
     $(".sololetras").validCampoFranz('abcdefghijklmnñopqrstuvwxyzABCDEFGHIJKLMNÑOPQRSTUVWXYZ ');
     $("#txtEmail").validCampoFranz('abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890.-_@');
 });
 
 $("#btnregistro").click(function () {
-
     var ctrlnonull;
     $(".nonull").each(function () {
         var valor = $.trim($(this).val());
@@ -79,6 +78,17 @@ $("#btnregistro").click(function () {
             return false;
         } else {
             alertify.error("Las contraseñas no coinciden");
+            return false;
+        }
+    }
+
+    var chkterminos = $("#chkterminos").is(":checked");
+    if (chkterminos != true) {
+        if (lang == "en") {
+            alertify.error("You must read and accept the terms and conditions");
+            return false;
+        } else {
+            alertify.error("Debes leer y aceptar los terminos y condiciones");
             return false;
         }
     }
