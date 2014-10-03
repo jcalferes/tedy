@@ -19,4 +19,10 @@ class DAOCategorias {
         return $rs;
     }
 
+    function guardarCategoria($categoria) {
+        $sql = "INSERT INTO categorias (categoria) VALUES ('$categoria')";
+        $rs = mysql_query($sql);
+        return $rs;
+    }
+
 }

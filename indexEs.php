@@ -32,10 +32,8 @@
             <div class="contact-info">
                 <h5>Address</h5>
                 <p>5th Avenue, New York - United States</p>
-
                 <h5>Email</h5>
                 <p>hello@webpixels.ro</p>
-
                 <h5>Phone</h5>
                 <p>+10 724 1234 567</p>
             </div>

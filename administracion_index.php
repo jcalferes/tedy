@@ -16,6 +16,9 @@
         <link rel="stylesheet" href="assets/css/ace-rtl.min.css" />
         <script src="assets/js/ace-extra.min.js"></script>
         <script src="js/jquery.js"></script>
+        <script src="alertify/lib/alertify.js"></script>
+        <link href="alertify/themes/alertify.core.css" rel="stylesheet">
+        <link href="alertify/themes/alertify.default.css" rel="stylesheet">
         <script src="jsAdministracion/usuarios.js" type="text/javascript"></script>
         <script src="jsAdministracion/categorias.js" type="text/javascript"></script>
     </head>
@@ -727,7 +730,7 @@
 
 
         <script type="text/javascript">
-                        window.jQuery || document.write("<script src='assets/js/jquery.min.js'>" + "<" + "/script>");
+            window.jQuery || document.write("<script src='assets/js/jquery.min.js'>" + "<" + "/script>");
         </script>
 
 
@@ -750,8 +753,8 @@
         <script src="assets/js/ace.min.js"></script>
 
         <script type="text/javascript">
-            jQuery(function ($) {
-                $('.easy-pie-chart.percentage').each(function () {
+            jQuery(function($) {
+                $('.easy-pie-chart.percentage').each(function() {
                     var $box = $(this).closest('.infobox');
                     var barColor = $(this).data('color') || (!$box.hasClass('infobox-dark') ? $box.css('color') : 'rgba(255,255,255,0.95)');
                     var trackColor = barColor == 'rgba(255,255,255,0.95)' ? 'rgba(255,255,255,0.25)' : '#E2E2E2';
@@ -767,7 +770,7 @@
                     });
                 })
 
-                $('.sparkline').each(function () {
+                $('.sparkline').each(function() {
                     var $box = $(this).closest('.infobox');
                     var barColor = !$box.hasClass('infobox-dark') ? $box.css('color') : '#FFF';
                     $(this).sparkline('html',
@@ -835,7 +838,7 @@
                 var $tooltip = $("<div class='tooltip top in'><div class='tooltip-inner'></div></div>").hide().appendTo('body');
                 var previousPoint = null;
 
-                placeholder.on('plothover', function (event, pos, item) {
+                placeholder.on('plothover', function(event, pos, item) {
                     if (item) {
                         if (previousPoint != item.seriesIndex) {
                             previousPoint = item.seriesIndex;
@@ -925,7 +928,7 @@
                 //so disable dragging when clicking on label
                 var agent = navigator.userAgent.toLowerCase();
                 if ("ontouchstart" in document && /applewebkit/.test(agent) && /android/.test(agent))
-                    $('#tasks').on('touchstart', function (e) {
+                    $('#tasks').on('touchstart', function(e) {
                         var li = $(e.target).closest('#tasks li');
                         if (li.length == 0)
                             return;
@@ -941,14 +944,14 @@
                     placeholder: 'draggable-placeholder',
                     forcePlaceholderSize: true,
                     tolerance: 'pointer',
-                    stop: function (event, ui) {
+                    stop: function(event, ui) {
                         //just for Chrome!!!! so that dropdowns on items don't appear below other items after being moved
                         $(ui.item).css('z-index', 'auto');
                     }
                 }
                 );
                 $('#tasks').disableSelection();
-                $('#tasks input:checkbox').removeAttr('checked').on('click', function () {
+                $('#tasks input:checkbox').removeAttr('checked').on('click', function() {
                     if (this.checked)
                         $(this).closest('li').addClass('selected');
                     else
@@ -957,7 +960,7 @@
 
 
                 //show the dropdowns on top or bottom depending on window height and menu position
-                $('#task-tab .dropdown-hover').on('mouseenter', function (e) {
+                $('#task-tab .dropdown-hover').on('mouseenter', function(e) {
                     var offset = $(this).offset();
 
                     var $w = $(window)
