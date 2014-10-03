@@ -31,8 +31,10 @@ if ($ctrl != true) {
     $call = 1;
 } else {
     $correo->setPara(filter_input(INPUT_POST, 'email'));
-    $correo->setMensaje("Prueba de correo");
-    $correo->setAsunto("Wellcome / Bienvenido Mercatodo");
+    $correo->setMensaje("<img src='http://imageshack.com/a/img674/6986/1vAPAq.png'><br>Thanks for your register on Mercatodo.<br>To activate your new account click on the following link:"
+            . "<br>__________________________________________________________________________<br>"
+            . "<br>Gracias por registrarse en Mercatodo. <br>Para activar su nueva cuenta haga clic en el siguiente link:<br><br><a href='http://localhost/tedy/usuario_activarCuenta.php?act_coded=$clave'>Click Here</a>");
+    $correo->setAsunto("Mercatodo - Wellcome / Bienvenido");
     $uti->enviarCorreoElectronico($correo, $mail);
     $call = 0;
 }
