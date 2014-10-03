@@ -19,35 +19,32 @@ class utilerias {
         return $codificado;
     }
 
-    function enviarCorreoElectronico($destinos) {
-        include_once ("class.phpmailer.php");
-        include_once ("class.smtp.php");
-
-        $mail = new PHPMailer(); //Objeto de PHPMailer
-        $mail->IsSMTP(); //Protocolo SMTP
-        $mail->SMTPAuth = true; //Autentificacion de SMTP
-//    $mail->SMTPSecure = "tls"; //SSL socket layer
-//  $mail->Host = "smtp.mail.yahoo.com"; //Servidor de SMTP 
-//    $mail->Port = 25; //Puerto seguro del servidor SMTP 
-
-        $mail->SMTPSecure = "ssl";
-        $mail->Host = "smtp.gmail.com";
-        $mail->Port = 465;
-
-        $mail->From = "GrupoChabri"; //Remitente (En mi variable)
-        foreach ($destinos as $value) {
-            $mail->AddAddress($value); //Destinatario
-        }
-
-        $mail->Username = "grupochabri@gmail.com"; /* Tienes que poner una direccion de correo real y de del servidor SMTP seleccionado */
-        $mail->Password = "madera65"; //Aqui va la contraseña valida de tu correo
-        $mail->Subject = "Cotizacion"; //El asunto de correo
-        $mail->Body = "Aqui va un mensaje"; //El mensaje de correo
-//    $mail->WordWrap = 50; //# de columnas
+    function enviarCorreoElectronico(Correo $correo, PhPMailer $mail) {
+        $de = "shanaxchornos@gmail.com";
+        $para = "comodoro_21@hotmail.com"; //$_GET["email"];
+        $asunto = $correo->getAsunto();
+        $cabeceras = "MIME-Version: 1.0\r\n";
+        $cabeceras .= "Content-type: text/html; charset=ISO-8859-1\r\n";
+        $cabeceras .= "From: $de \r\n";
         $mail->CharSet = 'UTF-8';
-        $mail->WordWrap = 50;
-        $mail->MsgHTML("Aqui va un mensaje"); //Se indica que el cuerpo del correo tendra formato HTML
-        $mail->AddAttachment("../administracion/reportes/probando.pdf", "nombre.pdf"); //Accedemos al archivo que se subio al servidor y lo adjuntamos
+        ////Trabajando con PHPMailer
+        ////Trabajando con PHPMailer
+        //$mail = new PHPMailer();
+        $mail->IsSMTP();
+        $mail->IsHTML = true;
+        $mail->SMTPAuth = true; //Autentificacion de SMTP
+        $mail->SMTPSecure = "ssl"; //SSL socket layer
+        $mail->Host = "smtp.gmail.com"; //Servidor de SMTP 
+        $mail->Port = 465; // 465
+        $mail->From = $de; //Remitente (En mi variable)
+        $mail->AddAddress($correo->getPara()); //Destinatario
+        $mail->Username = "grupochabri@gmail.com";
+        $mail->Password = "madera65"; //Aqui va la contraseña valida de tu correo
+        $mail->Subject = $asunto; //El asunto de correo
+        $mail->Body = $pass; //$mensaje; //El mensaje de correo
+        $mail->CharSet = 'UTF-8';
+        $mail->WordWrap = 50; //# de columnas
+        $mail->MsgHTML($correo->getMensaje()); //Se indica que el cuerpo del correo tendra formato HTML
 
         if ($mail->Send()) {//Enviamos el correo por PHPMailer
             $respuesta = "El mensaje a sido enviado desde tu cuenta de Gmail :)";

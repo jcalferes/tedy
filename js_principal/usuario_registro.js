@@ -99,7 +99,7 @@ $("#btnregistro").click(function () {
     data.append('amaterno', $("#txtApellidoMaterno").val());
     data.append('email', $("#txtEmail").val());
     data.append('pass', $("#txtPass2").val());
-    data.append('lang',lang);
+    data.append('lang', lang);
 
     $.ajax({
         url: 'usuario_guardar.php', //Url a donde la enviaremos
@@ -110,7 +110,13 @@ $("#btnregistro").click(function () {
         cache: false //Para que el formulario no guarde cache
     }).done(function (call) {
         if (call != 1) {
-            alertify.success("Ok");
+            if (lang == "en") {
+                window.location.replace("./usuario_verificarEmailEn.php");
+                return false;
+            } else {
+                window.location.replace("./usuario_verificarEmailEs.php");
+                return false;
+            }
         } else {
             alertify.error("Bad");
         }

@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Bienvenido a Mercatodo.com</title>
+        <title>Bienvenido a Mercatodo</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Required -->
