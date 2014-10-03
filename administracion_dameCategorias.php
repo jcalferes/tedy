@@ -1,9 +1,9 @@
 <?php
-include './daoconexion/daoConeccion.php';
+include './conexion.php';
 include './DAOAdministracion/DAOCategorias.php';
 $cn = new coneccion();
 $dao = new DAOCategorias();
-$cn->Conectarse();
+$cn->conectarse();
 $rs = $dao->dameCategorias();
 if ($rs == false) {
     ?>
