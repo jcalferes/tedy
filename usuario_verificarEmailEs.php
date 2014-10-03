@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>Bienvenido a Mercatodo</title>
+        <title>Bienvenido a Mercatodo.com</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Required -->
@@ -14,106 +14,28 @@
         <link href="alertify/themes/alertify.default.css" rel="stylesheet">
     </head>
     <body>
-        <span id="lang" hidden="true">en</span>
-        <?php include './menuEn.php'; ?>
-        <div class="pg-opt pin">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-6">
-                        <h2>Sign up</h2>
-                    </div>
-                    <!--                    <div class="col-md-6">
-                                            <ol class="breadcrumb">
-                                                <li><a href="#">Home</a></li>
-                                                <li><a href="#">Pages</a></li>
-                                                <li class="active">Sign up</li>
-                                            </ol>
-                                        </div>-->
-
-                </div>
-            </div>
-        </div>
-
         <section class="slice bg-3">
             <div class="w-section inverse">
                 <div class="container">
                     <div class="row">
                         <div class="col-md-12">
                             <div class="text-center">
-                                <h2>Welcome to Boomerang Bootstrap Template</h2>
-                                <p style="font-size:16px;">
-                                    Create your own account and explore more.
-                                </p>
+                                <h2>Account successfully created!</h2>
+                                <img class="img-responsive" style='margin: auto' height="160px" width="160px" src="images/email-chk.jpg">
 
                             </div>
                         </div>
                     </div>
-
                     <div class="row">
                         <div class="col-md-8 col-md-offset-2 col-sm-6 col-sm-offset-3">
                             <div class="w-section inverse">                       
                                 <div class="w-box sign-in-wr bg-5">
-
-                                    <div class="form-header">
-                                        <h2>Create your own account</h2>
-                                    </div>
                                     <div class="form-body">
                                         <p>
-                                            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+                                            Please, verify your email address to activate your new account.
                                         </p>
-                                        <form class="form-light padding-15">
-                                            <div class="form-group">
-                                                <label for="email">Name</label>
-                                                <input type="text" class="form-control nonull sololetras" id="txtNombre" placeholder="">
-                                            </div>
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="firstName">First name</label>
-                                                        <input type="text" class="form-control nonull sololetras" id="txtApellidoPaterno" placeholder="">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="lastName">Last name</label>
-                                                        <input type="text" class="form-control nonull sololetras" id="txtApellidoMaterno" placeholder="">
-                                                    </div>
-                                                </div>
-                                            </div>  
-
-                                            <div class="form-group">
-                                                <label for="email">Email</label>
-                                                <input type="email" class="form-control nonull" id="txtEmail" placeholder="">
-                                            </div>
-
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="pass">Password</label>
-                                                        <input type="password" class="form-control nonull" id="txtPass" placeholder="">
-                                                    </div>
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <div class="form-group">
-                                                        <label for="pass2">Confirm password</label>
-                                                        <input type="password" class="form-control nonull" id="txtPass2" placeholder="">
-                                                    </div>
-                                                </div>
-                                            </div>      
-                                            <div class="row">
-                                                <div class="col-md-6">
-                                                    <label class="checkbox persistent"><input type="checkbox" id="chkterminos"> I accept the <a href="terms.html">terms and conditions of this website.</a></label>                        
-                                                </div>
-                                                <div class="col-md-6">
-                                                    <button class="btn btn-two pull-right" type="button" id="btnregistro">Sign Up</button>                        
-                                                </div>
-                                            </div>
-                                        </form>
-
                                     </div>
-                                    <div class="form-footer">
-                                        <p>Already have an account? <a href="sign-in.html">Click here to sign in.</a></p>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>

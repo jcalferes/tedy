@@ -1,9 +1,9 @@
 <?php
-include './daoconexion/daoConeccion.php';
+include './conexion.php';
 include './DAOAdministracion/DAOUsuarios.php';
 $cn = new coneccion();
 $dao = new DAOUsuarios();
-$cn->Conectarse();
+$cn->conectarse();
 $rs = $dao->dameUsuarios();
 if ($rs == false) {
     echo mysql_error();

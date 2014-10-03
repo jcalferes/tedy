@@ -92,9 +92,33 @@ $("#btnregistro").click(function () {
             return false;
         }
     }
+    var data = new FormData();
 
+    data.append('nombre', $("#txtNombre").val());
+    data.append('apaterno', $("#txtApellidoPaterno").val());
+    data.append('amaterno', $("#txtApellidoMaterno").val());
+    data.append('email', $("#txtEmail").val());
+    data.append('pass', $("#txtPass2").val());
+    data.append('lang', lang);
 
-
-
-
+    $.ajax({
+        url: 'usuario_guardar.php', //Url a donde la enviaremos
+        type: 'POST', //Metodo que usaremos
+        contentType: false, //Debe estar en false para que pase el objeto sin procesar
+        data: data, //Le pasamos el objeto que creamos con los archivos
+        processData: false, //Debe estar en false para que JQuery no procese los datos a enviar
+        cache: false //Para que el formulario no guarde cache
+    }).done(function (call) {
+        if (call == 0) {
+            if (lang == "en") {
+                window.location.replace("./usuario_verificarEmailEn.php");
+                return false;
+            } else {
+                window.location.replace("./usuario_verificarEmailEs.php");
+                return false;
+            }
+        } else {
+            alertify.alert("ERROR: " + call);
+        }
+    });
 });
