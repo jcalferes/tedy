@@ -109,7 +109,7 @@ $("#btnregistro").click(function () {
         processData: false, //Debe estar en false para que JQuery no procese los datos a enviar
         cache: false //Para que el formulario no guarde cache
     }).done(function (call) {
-        if (call != 1) {
+        if (call == 0) {
             if (lang == "en") {
                 window.location.replace("./usuario_verificarEmailEn.php");
                 return false;
@@ -118,7 +118,7 @@ $("#btnregistro").click(function () {
                 return false;
             }
         } else {
-            alertify.error("Bad");
+            alertify.alert("ERROR: " + call);
         }
     });
 });

@@ -14,7 +14,7 @@ class utilerias {
         }
     }
 
-    function genera_md5($clave, $destinos) {
+    function genera_md5($clave) {
         $codificado = md5($clave);
         return $codificado;
     }
@@ -41,7 +41,7 @@ class utilerias {
         $mail->Username = "grupochabri@gmail.com";
         $mail->Password = "madera65"; //Aqui va la contraseña valida de tu correo
         $mail->Subject = $asunto; //El asunto de correo
-        $mail->Body = $pass; //$mensaje; //El mensaje de correo
+      //$mail->Body = $pass; //$mensaje; //El mensaje de correo
         $mail->CharSet = 'UTF-8';
         $mail->WordWrap = 50; //# de columnas
         $mail->MsgHTML($correo->getMensaje()); //Se indica que el cuerpo del correo tendra formato HTML
