@@ -99,6 +99,7 @@ $("#btnregistro").click(function () {
     data.append('amaterno', $("#txtApellidoMaterno").val());
     data.append('email', $("#txtEmail").val());
     data.append('pass', $("#txtPass2").val());
+    data.append('lang',lang);
 
     $.ajax({
         url: 'usuario_guardar.php', //Url a donde la enviaremos
@@ -107,7 +108,11 @@ $("#btnregistro").click(function () {
         data: data, //Le pasamos el objeto que creamos con los archivos
         processData: false, //Debe estar en false para que JQuery no procese los datos a enviar
         cache: false //Para que el formulario no guarde cache
-    }).done(function (msg) {
-        
+    }).done(function (call) {
+        if (call != 1) {
+            alertify.success("Ok");
+        } else {
+            alertify.error("Bad");
+        }
     });
 });
