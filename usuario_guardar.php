@@ -31,7 +31,7 @@ $ctrl = $dao->usuario_guardar($usuario, $clave, $fecha);
 if (!is_numeric($ctrl)) {
     $call = $ctrl;
 } else {
-    
+
     $correo->setPara(filter_input(INPUT_POST, 'email'));
     $correo->setMensaje("<img src='http://imageshack.com/a/img674/6986/1vAPAq.png'><br>Thanks for your register on Mercatodo.<br>To activate your new account click on the following link:"
             . "<br>__________________________________________________________________________<br>"

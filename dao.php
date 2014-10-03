@@ -34,7 +34,32 @@ class dao {
     }
 
     function usuario_activarcuenta($id, $clave) {
-        
+        try {
+            $query = "SELECT * FROM usuario u "
+                    . "INNER JOIN activarusuario au on u.idUsuario = au.idUsuario "
+                    . "WHERE au.idUsuario = '$id' AND au.clave = '$clave'";
+            mysql_query("START TRANSACTION;");
+            $ctrl = mysql_query($query);
+            $row = mysql_affected_rows();
+            if ($ctrl != false) {
+                if ($row > 0) {
+                    $query = "UPDATE usuario SET status = '1' WHERE idUsuario = '$id'";
+                    $ctrl = mysql_query($query);
+                    if ($ctrl != false) {
+                        
+                    } else {
+                        throw new Exception();
+                    }
+                }
+            } else {
+                throw new Exception();
+            }
+            mysql_query("COMMIT;");
+        } catch (Exception $e) {
+            $ctrl = mysql_error();
+            mysql_query("ROLLBACK;");
+        }
+        return $ctrl;
     }
 
 }
