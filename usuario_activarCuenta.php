@@ -11,6 +11,9 @@ $cn = new conexion();
 
 $cn->conectarse();
 $ctrl = $dao->usuario_activarcuenta($id, $clave);
+if ($ctrl == 000) {
+    header('Location: ./usuario_cuentaNoActivada.php');
+}
 if ($ctrl == true) {
     header('Location: ./usuario_cuentaActivada.php');
 } else {

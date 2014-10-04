@@ -46,15 +46,16 @@ class dao {
                     $query = "UPDATE usuario SET status = '1' WHERE idUsuario = '$id'";
                     $ctrl = mysql_query($query);
                     if ($ctrl != false) {
-                        
+                        mysql_query("COMMIT;");
                     } else {
                         throw new Exception();
                     }
+                } else {
+                    $ctrl = 000;
                 }
             } else {
                 throw new Exception();
             }
-            mysql_query("COMMIT;");
         } catch (Exception $e) {
             $ctrl = mysql_error();
             mysql_query("ROLLBACK;");
