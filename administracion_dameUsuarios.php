@@ -1,7 +1,7 @@
 <?php
 include './conexion.php';
 include './DAOAdministracion/DAOUsuarios.php';
-$cn = new coneccion();
+$cn = new conexion();
 $dao = new DAOUsuarios();
 $cn->conectarse();
 $rs = $dao->dameUsuarios();

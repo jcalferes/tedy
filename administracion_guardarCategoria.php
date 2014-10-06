@@ -1,7 +1,7 @@
 <?php
 
 include './DAOAdministracion/DAOCategorias.php';
-include './daoconexion/daoConeccion.php';
+include './conexion.php';
 $cn = new coneccion();
 $cn->Conectarse();
 $daoCategoria = new DAOCategorias();

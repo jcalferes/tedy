@@ -21,6 +21,7 @@
         <link href="alertify/themes/alertify.default.css" rel="stylesheet">
         <script src="jsAdministracion/usuarios.js" type="text/javascript"></script>
         <script src="jsAdministracion/categorias.js" type="text/javascript"></script>
+        <script src="jsAdministracion/productos.js" type="text/javascript"></script>
     </head>
 
     <body class="no-skin">
@@ -381,7 +382,6 @@
                             <li class="form-inline">
                                 <a href="#" id="usuarios">
                                     <i class="menu-icon fa fa-caret-right"></i>
-
                                     Usuarios
                                 </a>
                                 <b class="arrow"></b>
@@ -389,12 +389,17 @@
                             <li class="form-inline">
                                 <a href="#" id="categorias">
                                     <i class="menu-icon fa fa-caret-right"></i>
-
                                     Categorias
                                 </a>
                                 <b class="arrow"></b>
                             </li>
-
+                            <li class="form-inline">
+                                <a href="#" id="productos">
+                                    <i class="menu-icon fa fa-caret-right"></i>
+                                   Productos
+                                </a>
+                                <b class="arrow"></b>
+                            </li>
                         </ul>
 
                     </li>
