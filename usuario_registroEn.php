@@ -14,7 +14,6 @@
         <link href="alertify/themes/alertify.default.css" rel="stylesheet">
     </head>
     <body>
-        <span id="lang" hidden="true">en</span>
         <?php include './menuEn.php'; ?>
         <div class="pg-opt pin">
             <div class="container">
